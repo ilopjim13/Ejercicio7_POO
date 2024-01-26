@@ -1,3 +1,9 @@
+/**
+ * Clase persona con el dni y una lista con las cuentas de la persona,
+ *
+ * @param dni :String DNI de la persona con el que se va a identificar
+ * @param cuentas :Array<Cuenta> array con las cuentas de tipo Cuenta de la persona
+ */
 class Persona(val dni: String, var cuentas:Array<Cuenta>) {
 
     init {
@@ -6,6 +12,10 @@ class Persona(val dni: String, var cuentas:Array<Cuenta>) {
     fun personaMorosa(persona:Persona) : Boolean {
         persona.cuentas.forEach {if (it.saldo < 0) return true}
         return false
+    }
+
+    fun agregarCuentas() {
+
     }
 
     fun realizarTransferencia(personaB:Persona, numCuenta:String, numCuentaB:String, cant:Int) {
