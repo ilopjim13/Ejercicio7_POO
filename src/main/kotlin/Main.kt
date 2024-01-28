@@ -1,7 +1,12 @@
 fun main() {
 
-    val persona1 = Persona("123456789H", arrayOf<Cuenta>(Cuenta("1111111", 0), Cuenta("222222", 700)))
-    val persona2 = Persona("123456789H", arrayOf<Cuenta>(Cuenta("3333333", 450), Cuenta("123456", 500)))
+    val persona1 = Persona("123456789H")
+    val persona2 = Persona("123456789H")
+    persona1.agregarCuentas("1111111", 0)
+    persona1.agregarCuentas("222222", 700)
+    persona2.agregarCuentas("3333333", 450)
+    persona2.agregarCuentas("123456", 500)
+
 
     persona1.cuentas[0].recibirAbono(1100)
     persona1.cuentas[1].realizarPago(750)
